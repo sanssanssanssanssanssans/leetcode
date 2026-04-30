@@ -5,16 +5,10 @@ TEMPLATE = """
 using namespace std;
 using ll = long long;
 using pii = pair<int,int>;
-using vi = vector<int>;
 #define all(x) x.begin(), x.end()
 #define rall(x) x.rbegin(), x.rend()
 #define pb push_back
-#define eb emplace_back
-#define mp make_pair
 #define sz(x) (int)x.size()
-#define sum(v) accumulate(all(v),0)
-#define each(x,v) for(auto&x:v)
-#define rep(i,a,b) for(int i=a;i<b;i++)
 
 class Solution {
 public:
@@ -29,12 +23,8 @@ int main() {
 """
 
 BAT_TEMPLATE = """@echo off
-g++ -std=c++17 -O2 -Wall main.cpp -o main.exe
-if %errorlevel% neq 0 (
-    echo Build failed
-    exit /b %errorlevel%
-)
-echo Build success"""
+g++ -std=c++17 -O2 -o main.exe main.cpp
+"""
 
 def sanitize(name : str) -> str:
     return name.strip().replace(" ", "_")
